@@ -201,6 +201,7 @@ bool checkDiagonals(SquareStatus chessBoard[SIZE][SIZE], int row, int column) {
 
       // If 2 points are diagonally aligned, the same variables should subtract
       // and get the same number
+      // Based on slope formula and y=mx+b
       bool isDiagonal = i - row == j - column;
 
       // See if the current square is a queen and is a diagonal. If it is, then
@@ -229,6 +230,7 @@ bool checkDiagonals(SquareStatus chessBoard[SIZE][SIZE], int row, int column) {
       // If 2 points are diagonally aligned, the same variables should subtract
       // and get the same number, except you switch the numbers in one of the
       // things because it's the reverse of the 1st type of diagonal
+      // Based on slope formula and y = mx+b
       bool isDiagonal = i - row == column - j;
 
       // See if the current square is a queen and is a diagonal. If it is, then
