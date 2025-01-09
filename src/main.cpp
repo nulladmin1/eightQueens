@@ -118,8 +118,9 @@ bool columnTraversal(SquareStatus chessBoard[SIZE][SIZE], int column) {
   if (column >= SIZE)
     return true;
 
+  // Iterate through every element of the column
   for (int i = 0; i < SIZE; i++) {
-    // Place a queen at the current (i, column) and remove if it doesn't work
+    // Place a queen at the current (i, column) and later remove if it doesn't work
     chessBoard[i][column] = Queen;
 
     // Store a bool to see if all the rows, columns, and diagonals' requirements
@@ -138,6 +139,7 @@ bool columnTraversal(SquareStatus chessBoard[SIZE][SIZE], int column) {
     // because I forgot to do this)
     chessBoard[i][column] = Empty;
   }
+  // If no queens can be placed in the column, return false to backtrack
   return false;
 }
 
