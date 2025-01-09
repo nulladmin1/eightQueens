@@ -1,5 +1,5 @@
 {
-  description = "Nix Flake Template for C++";
+  description = "Eight Queens";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -29,7 +29,7 @@
 
     packages = forEachSystem (system: {
       default = pkgsFor.${system}.stdenv.mkDerivation {
-        pname = "cpp";
+        pname = "eightQueens";
         version = "0.1.0";
         src = ./.;
 
@@ -45,7 +45,7 @@
     apps = forEachSystem (system: {
       default = {
         type = "app";
-        program = "${self.packages.${system}.default}/bin/hello";
+        program = "${self.packages.${system}.default}/bin/eightQueens";
       };
     });
   };
