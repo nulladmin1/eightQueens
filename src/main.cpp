@@ -1,4 +1,4 @@
-// Shrey Deogade & sigma boy
+// Shrey Deogade & Aadesh Jay Harikumar
 // Period 4
 // Midterm Project
 
